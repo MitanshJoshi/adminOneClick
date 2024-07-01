@@ -32,7 +32,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 
 // Data
-import authorsTableData from "layouts/chemicallist/data/authorsTableData";
+import startupTableData from "layouts/chemicallist/data/startupTableData";
 import { useState } from "react";
 
 const Startuplist = () => {
@@ -57,7 +57,7 @@ const Startuplist = () => {
   const handlecity=(e)=>{
     setcity(e.target.value)
   }
-  const { columns, rows } = authorsTableData(startup,country,state,city);
+  const { columns, rows } = startupTableData(startup,country,state,city);
   return (
     <DashboardLayout>
       <DashboardNavbar />
