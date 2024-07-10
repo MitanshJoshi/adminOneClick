@@ -1,1 +1,1 @@
-export const BASE_URL = "https://one-click-backend.onrender.com";
+export const BASE_URL = "https://oneclick-sfu6.onrender.com";
