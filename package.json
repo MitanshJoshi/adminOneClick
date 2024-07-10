@@ -77,5 +77,8 @@
   },
   "overrides": {
     "svgo": "3.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }

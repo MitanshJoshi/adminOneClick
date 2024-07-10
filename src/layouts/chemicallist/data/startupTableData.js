@@ -85,6 +85,7 @@ export default function Data(startup,country,state,city) {
       // { Header: "registeredAs", accessor: "registeredAs", align: "center" },
       { Header: "pincode", accessor: "pincode", align: "center" },
       { Header: "view", accessor: "view",width: "10%", align: "center" },
+      { Header: "view inquiries", accessor: "inquiries",width: "10%", align: "center" },
     ],
 
     rows: filteredData && filteredData.map((e) => ({
@@ -155,6 +156,11 @@ export default function Data(startup,country,state,city) {
       view: (
         <MDTypography component="a" href={`/edit-chemical/${e._id}`} variant="caption" color="text" fontWeight="medium">
           view
+        </MDTypography>),
+
+      inquiries: (
+        <MDTypography component="a" href={`/view-inquiry/${e._id}`} variant="caption" color="text" fontWeight="medium">
+          view inquiries
         </MDTypography>)
     }))
   };

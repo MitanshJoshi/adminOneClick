@@ -12,7 +12,6 @@ const Data = (searchTerm,contact,state,city) => {
   
   const [adminList, setAdminList] = useState([])
   
-
   const filterData = () => {
     return adminList.filter((item) => {
      

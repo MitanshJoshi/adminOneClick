@@ -76,6 +76,11 @@ import Productdetail from "layouts/chemicallist/data/productdetail";
 import Userlist from "layouts/admins";
 import Forgot from "layouts/authentication/forgetpassword/cover";
 import Inquiry from "layouts/tables";
+import Allinvestor from "layouts/investor/Allinvestor";
+import Editinvestor from "layouts/investor/ShowInvestor";
+import StartupInquiryDisplay from "layouts/chemicallist/Startupinquiries";
+import InvestorInquiry from "layouts/investor/Investorinquiry";
+import Startuppartner from "layouts/Partners/Startuppartners";
 // import Startuplist from "layouts/chemicallist/startuplist";
 
 const routes = [
@@ -106,7 +111,7 @@ const routes = [
   {
     type: "collapse",
     name: "Startup List",
-    key: "chemicals",
+    key: "startuplist",
     icon: <Icon fontSize="small">rocket</Icon>    ,
     route: "/Startup-List",
     component: <Startuplist />,
@@ -120,14 +125,16 @@ const routes = [
     route: "/company",
     component: <Inquiry />,
   },
-  // // {
-  //   type: "collapse",
-  //   name: "Categories",
-  //   key: "categories",
-  //   icon: <Icon fontSize="small">receipt_long</Icon>,
-  //   route: "/category-list",
-  //   component: <Categories />,
-  // },
+
+  {
+    type: "collapse",
+    name: "All Investors",
+    key: "invesotres",
+    icon: <Icon fontSize="small">question_answer</Icon>,
+    route: "/Allinvestor",
+    component: <Allinvestor />,
+  },
+ 
   // {
   //   type: "collapse",
   //   name: "Subcategories",
@@ -194,6 +201,14 @@ const routes = [
   },
   {
     type: "routes",
+    name: "Partner",
+    key: "partner",
+    icon: <Icon fontSize="small">add_box</Icon>,
+    route: "/allpartner/:_id",
+    component: <Startuppartner />,
+  },
+  {
+    type: "routes",
     name: "Edit Chemical",
     key: "edit-chemical",
     icon: <Icon fontSize="small">add_box</Icon>,
@@ -247,6 +262,30 @@ const routes = [
     icon: <Icon fontSize="small">add_box</Icon>,
     route: "/edit-admin/:_id",
     component: <Editadmin />,
+  },
+  {
+    type: "routes",
+    name: "Edit Investor",
+    key: "edit-investor",
+    icon: <Icon fontSize="small">add_box</Icon>,
+    route: "/edit-investor/:_id",
+    component: <Editinvestor />,
+  },
+  {
+    type: "routes",
+    name: "View Inquiries",
+    key: "view-inquiries",
+    icon: <Icon fontSize="small">add_box</Icon>,
+    route: "/view-inquiry/:_id",
+    component: <StartupInquiryDisplay />,
+  },
+  {
+    type: "routes",
+    name: "View Inquiries",
+    key: "view-invinquiries",
+    icon: <Icon fontSize="small">add_box</Icon>,
+    route: "/view-invinquiry/:_id",
+    component: <InvestorInquiry />,
   },
   {
     type: "routes",
