@@ -57,8 +57,20 @@ const StartupInquiryDisplay = () => {
  
   const handleSearchTermChange = (event) => setSearchTerm(event.target.value.toLowerCase());
 
+  const filteredInvestors = inquiry.filter((investor) => {
+    const investorName = investor.investor.InvestorName?.toLowerCase() || '';
+    console.log('investorname',investorName);
+
+    const searchTermLower = searchTerm.toLowerCase();
+  
+    const nameMatches = investorName.includes(searchTermLower);
+  
+    return nameMatches;
+  });
+  
+
   const columns = [
-    { Header: "Investor Photo", accessor: "photo", width: "10%", align: "center" },
+    { Header: "Investor Photo", accessor: "photo", width: "15%", align: "center" },
     { Header: "Investor Name", accessor: "name", width: "15%", align: "left" },
     { Header: "Inquiry Title", accessor: "title", width: "20%", align: "left" },
     { Header: "Inquiry description", accessor: "description", width: "20%", align: "left" },
@@ -66,7 +78,7 @@ const StartupInquiryDisplay = () => {
     { Header: "Inquiry Date", accessor: "date", width: "15%", align: "center" },
   ];
 
-  const rows = inquiry
+  const rows = filteredInvestors
     .filter((item) => item.InquiryBy === "startup")
     .map((item) => ({
       photo: (

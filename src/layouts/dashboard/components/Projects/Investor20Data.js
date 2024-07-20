@@ -29,10 +29,10 @@ import MDTypography from "components/MDTypography";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import data from "layouts/dashboard/components/Projects/data";
+import Idata from "./data/Top20Investors";
 
-function Projects() {
-  const { columns, rows } = data();
+function Investor20() {
+  const { columns, rows } = Idata();
   const [menu, setMenu] = useState(null);
 
   const openMenu = ({ currentTarget }) => setMenu(currentTarget);
@@ -64,7 +64,7 @@ function Projects() {
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <MDBox>
           <MDTypography variant="h6" gutterBottom>
-            20 Latest users
+            20 Latest Investors
           </MDTypography>
           <MDBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
@@ -101,4 +101,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Investor20;

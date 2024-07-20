@@ -81,6 +81,7 @@ import Editinvestor from "layouts/investor/ShowInvestor";
 import StartupInquiryDisplay from "layouts/chemicallist/Startupinquiries";
 import InvestorInquiry from "layouts/investor/Investorinquiry";
 import Startuppartner from "layouts/Partners/Startuppartners";
+import Startupinvestors from "layouts/investor/Startupinvestors";
 // import Startuplist from "layouts/chemicallist/startuplist";
 
 const routes = [
@@ -206,6 +207,14 @@ const routes = [
     icon: <Icon fontSize="small">add_box</Icon>,
     route: "/allpartner/:_id",
     component: <Startuppartner />,
+  },
+  {
+    type: "routes",
+    name: "investor",
+    key: "investor",
+    icon: <Icon fontSize="small">add_box</Icon>,
+    route: "/allinvestors/:_id",
+    component: <Startupinvestors />,
   },
   {
     type: "routes",

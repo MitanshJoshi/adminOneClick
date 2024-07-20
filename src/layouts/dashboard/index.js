@@ -34,6 +34,14 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import Startup from "./components/Projects/StartupIndex";
+import Investor20 from "./components/Projects/Investor20Data";
+import Catindex from "./components/Projects/Categoryindex";
+import CityStartup from "./components/Projects/StartupCityStateindex";
+import UserCities from "./components/Projects/UserCityState";
+import TopinquiryInvestoesss from "./components/Projects/Topinquiryinvestorindex";
+import TopinquiriesProductsindex from "./components/Projects/Top10productsindex";
+import TopinquiriesStartupindex from "./components/Projects/TopINquiredStartupindex";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -145,12 +153,51 @@ function Dashboard() {
           </Grid>
         </MDBox>
         <MDBox>
-          <Grid container spacing={3}>
+          <Grid>
             <Grid item xs={12} md={6} lg={8}>
               <Projects />
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
+              <MDBox mt={2}>
+                <Startup />
+              </MDBox>
+              <MDBox mt={2}>
+                <Investor20 />
+              </MDBox>
+              <Grid container spacing={2} mt={2}>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <TopinquiriesProductsindex />
+                  </MDBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <TopinquiriesStartupindex />
+                  </MDBox>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} mt={2}>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <Catindex />
+                  </MDBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <CityStartup />
+                  </MDBox>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} mt={2}>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <UserCities />
+                  </MDBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MDBox>
+                    <TopinquiryInvestoesss />
+                  </MDBox>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </MDBox>
